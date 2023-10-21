@@ -1,15 +1,17 @@
 #include <iostream>
 #include<algorithm>
 using namespace std;
-#define Target 8
-void print(int arr[], int size)
+#define Target 77
+void print(int arr[], int start,int end)
 {
-    for (int i = 0; i < size; i++)
+    for (int i = start; i < end; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
 int Binarysearch(int arr[], int first, int last, int target)
 {
+    cout<<endl;
+    print(arr,first,last);
     int mid = first - (first - last) / 2;
     if (first > last)
         return 0;
@@ -26,7 +28,7 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
     sort(arr,arr+size);
     cout << "Enter the array element::" << endl;
-    print(arr, size);
+    print(arr, 0,size-1);
     int ans = Binarysearch(arr, 0, size - 1, Target);
     if (ans)
         cout << "Target " << Target << " is found in the array at the index "<<ans;
