@@ -3,11 +3,12 @@ using namespace std;
 
 int sumr (int *arr,int n)
 {
-    int sum =0;
+    if(n==0)
+        return 0;
     if(n==1)
-        return sum;
-    sum+=arr[n-1];
-    sumr(arr,n-1);
+        return arr[0];
+    int remain=sumr(arr+1,n-1);
+    int sum =arr[0] +remain;
     return sum;
 }
 
