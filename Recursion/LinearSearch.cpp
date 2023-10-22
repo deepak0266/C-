@@ -15,7 +15,6 @@ int  linearsearch(int *arr,int n, int Target)
         return true;
     else
     {
-
         int remain=linearsearch(arr+1,n-1,Target);
         return remain;
     }

@@ -20,6 +20,7 @@ int Binarysearch(int arr[], int first, int last, int target)
     else if (arr[mid] > target)
         Binarysearch(arr, first, mid - 1, target);
     else
+    
         Binarysearch(arr, mid + 1, last, target);
 }
 int main()

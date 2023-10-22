@@ -6,7 +6,9 @@ int fact(int n)
     return 1;
 
     int factorial=n*fact(n-1);
+    
         cout<<"2^"<<n<<" = "<<factorial<<endl;
+
     return factorial;
 }
 int main()

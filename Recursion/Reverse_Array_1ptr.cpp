@@ -14,8 +14,7 @@ int reverseArray(int *arr,int first,int n)
 
     if(first>n)
         return 0;
-    if(first<n)
-        swap(arr[first],arr[n]);
+    swap(arr[first],arr[n]);
     return reverseArray(arr,first+1,n-1);
 }
 int main()

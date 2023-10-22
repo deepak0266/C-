@@ -5,7 +5,6 @@ int reverseString(int start,int n, string& name)
 {
     if(start>=n)
         return 0;
-    // if(start<(n-start-1))
     swap(name[start],name[n]);
     return reverseString(start+1,n-1,name);
 }

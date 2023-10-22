@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 # define target 8
-#define Initial_index 0
+# define Initial_index 0
 void print(int arr[],int size)
 {
     for(int i=0;i<size;i++)
@@ -30,7 +30,7 @@ int main()
     
     int ans=linearsearch(arr,size,target,Initial_index);
     if(ans)
-        cout<<"Target "<<target<<" is found in the array"<<" at the index "<<ans;
+        cout<<"Target "<<target<<" is found in the array at the index "<<ans;
     else
        cout<<"Target "<<target<<" is not found in the array";
 
