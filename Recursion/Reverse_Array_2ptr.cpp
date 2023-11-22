@@ -20,12 +20,11 @@ int reverseArray(int *arr,int first,int last)
 }
 int main()
 {
-       int arr[]={1,2,3,55,4,6,8,88,7,77,5,24};
+    int arr[]={1,2,3,55,4,6,8,88,7,77,5,24};
     int size=sizeof(arr)/sizeof(arr[0]);
     cout<<"Enter the array element::"<<endl;
     print(arr,size);
     reverseArray(arr,0,size-1);
     print(arr,size);
-    
     return 0;
 }
