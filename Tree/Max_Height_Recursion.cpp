@@ -122,15 +122,11 @@ vector<int> Preorder(Node *root)
     return result;
 }
 
-
 int MaxDepth(Node *root)
 {
     if(root==NULL)
-        return 0;
-    int lhs=MaxDepth(root->left);
-    int rhs=MaxDepth(root->right);
-
-    return 1+max(lhs,rhs);
+    return 0;
+    return 1+max(MaxDepth(root->left),MaxDepth(root->right));
 }
 int main()
 {

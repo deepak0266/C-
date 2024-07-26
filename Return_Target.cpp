@@ -1,4 +1,5 @@
 #include <iostream>
+#include<algorithm>
 #include<vector>
 using namespace std;
 int Position(vector<int>&vec,int target)
@@ -26,7 +27,7 @@ int Position(vector<int>&vec,int target)
 }
 int main()
 {
-    vector<int> vec={1,2,3,4,5,17,28};
+    vector<int> vec={1,2,3,8,9,0,54354,4,5,17,28};
     cout<<Position(vec,17);
     return 0;
 }

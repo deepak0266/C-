@@ -28,6 +28,7 @@ void insert(Node *&root,int data)
     else if(data>root->data)
         insert(root->right,data);
 }
+
 vector<int> Postorder(Node *root)
 {
     vector<int> result;
@@ -67,7 +68,9 @@ vector<int> Postorder(Node *root)
 
 
     return result;
+
 }
+
 vector<int> Inorder(Node *root)
 {
    
@@ -105,7 +108,7 @@ vector<int> Preorder(Node *root)
     if(root==NULL)
         return result;
     stack<Node *> s;
-    s.push(root);
+        s.push(root);
     while(!s.empty())
     {
         
@@ -113,14 +116,15 @@ vector<int> Preorder(Node *root)
         // cout<<current->data<<" ";
         result.push_back(current->data);
         s.pop();
+        if(current->right!=NULL)
+            s.push(current->right);
         if(current->left!=NULL)
             s.push(current->left);
 
-        if(current->right!=NULL)
-            s.push(current->right);
     }
     return result;
 }
+
 int main()
 {
 

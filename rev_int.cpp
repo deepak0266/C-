@@ -9,9 +9,10 @@ int main()
     while(n!=0)
     {
         digit=n%10;
-        if(ans>INT_MAX||ans<INT_MIN)
+        if(ans>INT_MAX/10||ans<INT_MIN/10)
             return 0;
         ans=ans*10+digit;
+        n=n/10;
     }
     cout<<"Reverse of a number :: "<<ans;
 }
